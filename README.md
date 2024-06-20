@@ -27,6 +27,9 @@ https://github.com/Serruhb/RequestForm/assets/50157566/eab44541-7773-4217-ae00-c
 Also, I will include step by step with picture for some lesser used processes.
 ![StepbyStepwithPics](https://github.com/Serruhb/RequestForm/assets/50157566/40d7307b-e336-4bed-9fcc-2b446208ad00)
 
+Utilizing the workspace feature within Salesforce was a key element to this project being able to be fully utilized by the end users. 
+
+[Workspace example](https://github.com/Serruhb/RequestForm/blob/main/workspaceReport.soql) This is one of the more complex joins that Salesforce out of the box reporting was not able to handle and solution was to use workspace and write the soql.
 
 
 
