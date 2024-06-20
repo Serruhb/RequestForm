@@ -1,0 +1,13 @@
+SELECT Quality_Issue_lk__r.CreatedDate, 
+Quality_Issue_lk__r.Name, 
+Quality_Issue_lk__r.Status_lk__r.Name, 
+Quality_Issue_lk__r.Title__c, Item_Revision__r.Name, 
+Item_Revision__r.Description__c, 
+Quality_Issue_lk__r.CreatedBy.CommunityNickname, 
+Item_Revision__r.Product_Number__r.Latest_Released_Revision__r.Product_Number_Series__r.Latest_Released_Revision__r.Description__c, 
+Quality_Issue_lk__r.Assembly_Location__r.Name, Quality_Issue_lk__r.Material_Lot_Number__c, 
+Quality_Issue_lk__r.Assembly_Lot_Number__c, Quality_Issue_lk__r.Lot_Quantity__c, 
+Quality_Issue_lk__r.Target_Start_Date__c, Quality_Issue_lk__r.Commit_Date__c, 
+Quality_Issue_lk__r.Actual_Ship_Date__c, Quality_Issue_lk__r.Ship_To_Location__r.Account_Code__c 
+FROM Affected_Item__c WHERE 
+Quality_Issue_lk__r.Name LIKE 'Q00%' AND Quality_Issue_lk__r.Status_lk__r.Name IN ('Planning Review', 'Engineering Review', 'Approved')
