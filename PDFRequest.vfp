@@ -1,0 +1,218 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" standardController="" extensions="RF_Ext_v2" renderAs="pdf" >
+    
+    <head>
+        <apex:stylesheet value="{!URLFOR($Resource.Basic_PDF_CSS)}"/> 
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+    
+    <div id= "DocumentHeader">
+        <header>
+            <p>Request Form
+            <img src="{!$Resource.Document_Logo}"/></p>
+        </header>
+    </div>
+    <body>
+        <table>
+            <!-- Table Headers -->
+            <caption>Request Form</caption>
+            <thead>
+                <tr>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+                <tr>
+                    <td><span>Quality Number:</span></td>
+                    <td class="norm"><apex:outputField value="{!.Name}"/></td>
+                    <td><span>Originator:</span></td>
+                    <td class="norm"><apex:outputField value="{!.OwnerId}"/></td>
+                </tr>
+                
+                <tr>
+                    <td><span>Title:</span></td>
+                    <td class="norm"><apex:outputField value="{!.Title__c}"/></td>
+                    <td><span>Location:</span></td>
+                    <td class="norm"><apex:outputField value="{!_Location__c}"/></td>
+                </tr>
+                <tr>
+                    <td><span>Company Item:</span></td>
+                    <td class="norm"><apex:outputText value="{!affItem}"/></td>
+                    <td><span>Description:</span></td>
+                    <td class="norm"><apex:outputField value="{!.Description_5000__c}"/></td>
+                </tr>
+            </thead>
+        </table>
+        <br/>
+        <table>
+        <caption>Additional Information</caption>
+        <thead>
+            <tr>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+            </tr>
+            
+            <tr>
+                <td><span> Option:</span></td>
+                <td class="norm"><apex:outputField value="{!_Option__c}"/></td>
+                <td><span> RequestForm Type:</span></td>
+                <td class="norm"><apex:outputField value="{!RequestForm_Type__c}" rendered="true"/></td>
+                
+                
+            </tr>
+            <tr>
+                <td><span> Build Requirements:</span></td>
+                <td class="norm"><apex:outputField value="{!RequestForm_Requirements__c}" rendered="true"/></td>
+                <td><span>Bonding Diagram:</span></td>
+                <td class="norm"><apex:outputField value="{!Bonding_Diagram_Title__c}"/></td>
+                
+            </tr>
+            <tr>
+                <td><span>Die Design Instructions:</span></td> 
+                <td class="norm"><apex:outputField value="{!Die_Design_Instructions__c}"/></td>
+                <td><span>Brand Special Instructions:</span></td> 
+                <td class="norm"><apex:outputField value="{!Brand_Special_Instructions__c}" /></td>
+                
+                
+            </tr>
+            <tr>
+                <td><span> RequestForm Reason Detail</span> </td> 
+                <td class="norm"><apex:outputField value="{!RequestForm_Reason_Detail__c}"/> </td>
+                <td><span>Offline Build:</span></td> 
+                <td class="norm"><apex:outputField value="{!Offline_Build__c}" rendered="true"/></td>
+                
+            </tr>
+            
+        </thead>
+        
+        </table>
+        <br/>
+        <table>
+            
+            <caption>Special Instructions</caption>
+            <thead>
+                <tr>
+                    <th> </th>
+                </tr>
+                <tr>
+                    <td class="norm"><apex:outputText escape="false" value="{!Special_Instructions__c}"/></td>
+                </tr>
+                
+            </thead>
+            
+        </table>
+        <br/>
+        <table>
+            <thead>
+                <caption>Lot Details</caption>
+                <tr>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                    
+                </tr>
+                <tr>
+                    <td><span>Wafer Qty:</span></td> 
+                    <td class="norm"><apex:outputField value="{!Wafer_Quantity__c}"/></td>
+                    <td><span>Material Lot:</span></td>
+                    <td class="norm"><apex:outputfield value="{!Material_Lot_Number__c}"/></td>
+                </tr>
+                <tr>
+                    <td><span>Wafer Skeleton:</span></td>
+                    <td class="norm"><apex:outputfield value="{!Wafer_Skeleton_Disposition__c}"/></td>
+                    <td><span>Fab Lot:</span></td>
+                    <td class="norm"><apex:outputfield value="{!Fab_Lot_Number__c}"/></td>
+                </tr>
+                <tr>
+                    <td><span>Wafer Numbers:</span></td>
+                    <td class="norm"><apex:outputfield value="{!Wafer_Numbers__c}"/></td>
+                    <td><span>Lot Quantity:</span></td>
+                    <td class="norm"><apex:outputfield value="{!Lot_Quantity__c}"/></td>
+                </tr>
+                
+            </thead>
+        </table>
+        <table>
+            <thead>
+                <caption>Shipping Details</caption>
+                <tr>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+                <tr>
+                    <td><span>Ship To 1:</span></td> 
+                    <td class="norm"><apex:outputField value="{!Ship_To_Location__c}"/></td>
+                    <td><span>Ship To 2:</span></td>
+                    <td class="norm"><apex:outputfield value="{!Ship_To_2__c}"/></td>
+                </tr>
+                <tr>
+                    <td><span>Shipment Special Instructions:</span></td> 
+                    <td class="norm"><apex:outputField value="{!Shipping_Special_Instructions__c}"/></td>
+                    <td><span>PO Number:</span></td>
+                    <td class="norm"><apex:outputField value="{!PO_Number__c}"/></td>
+                </tr>
+            </thead>
+        </table>
+        <br/>
+        <table>
+            <thead>
+                <caption> Planning</caption>
+                <tr>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+                <tr>
+                    <td><span>  Lot Number:</span></td> 
+                    <td style="text-align: left; font-size: 16px; text-decoration: underline;"><apex:outputField value="{!_Lot_Number__c}"/></td>
+                    <td><span>Commit Date:</span></td>
+                    <td class="norm"><apex:outputfield value="{!Commit_Date__c}"/></td>
+                </tr>
+                <tr>
+                    <td><span>Tracking Number:</span></td> 
+                    <td class="norm"><apex:outputField value="{!Tracking_Number__c}"/></td>
+                    <td><span>Actual Ship Date:</span></td>
+                    <td class="norm"><apex:outputfield value="{!Actual_Ship_Date__c}"/></td>
+                </tr>
+            </thead>
+        </table>
+    </body>
+    
+    
+    <!--Footer need to update time-->
+    
+    <table class="footer">
+        <tr>
+            <td class=" f-left ">
+                Generated
+                <apex:outputText value=" {0,date,MM'/'dd'/'yyyy} {0,time,short} " style="font-weight: bold;">
+                    <apex:param value="{!NOW()}" />
+                </apex:outputText>
+                by
+                <apex:outputText value=" {!$User.Username}" style="font-weight: bold;" />
+                <br />
+                <span>Generated documents are considered UNCONTROLLED REFERENCE COPIES</span>
+            </td>
+            
+            <td class="f-center">
+                <!-- Display a banner for sandbox orgs -->
+                <span class="background">{!SandboxName}</span>
+            </td>
+            
+            <td class="f-right">
+                <a href="{!SalesforceUrl}" style="color: #000;"> Product Data Management</a>
+                <!--br /-->
+                <span>Page
+                    <span class="pagenumber" /> of
+                    <span class="pagecount" /></span>
+            </td>
+        </tr>
+    </table>
+</apex:page>
