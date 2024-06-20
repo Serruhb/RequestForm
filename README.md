@@ -24,5 +24,9 @@ Starting with a quick reference guide once users only need a refresher. Inside t
 Video
 https://github.com/Serruhb/RequestForm/assets/50157566/eab44541-7773-4217-ae00-cb939e15336e
 
+Also, I will include step by step with picture for some lesser used processes.
+![StepbyStepwithPics](https://github.com/Serruhb/RequestForm/assets/50157566/40d7307b-e336-4bed-9fcc-2b446208ad00)
+
+
 
 
