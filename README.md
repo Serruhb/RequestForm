@@ -17,4 +17,12 @@ With this project in particular was transitioning from Oracle to Salesforce. I h
 
 Finally, once the development work has been approved and implmented. Adoption is incredibly important to these types of projects to have a successful adoption empowering users and aligning accountability. Creating digestible and easily understood user documentation empowers users to hit the ground running. Developer documentation is imperative to troubleshooting and accountability. Finally to support both stakeholders and users is dashboards and reporting. 
 
+Starting with a quick reference guide once users only need a refresher. Inside the high level guide is links to more in-depth learning and videos.
+
+![SimpleReferenceDocument](https://github.com/Serruhb/RequestForm/assets/50157566/8d5c5d42-e725-4d59-b95b-5f69bab9b355)
+
+Video
+https://github.com/Serruhb/RequestForm/assets/50157566/eab44541-7773-4217-ae00-cb939e15336e
+
+
 
